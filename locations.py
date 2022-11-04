@@ -14,8 +14,7 @@ def search(search_text):
 
 
 df = pd.read_csv("data/prices_all.csv")
-address = df['block'] + " " + df['street_name']
-address = address.drop_duplicates().tolist()
+address = df['address'].drop_duplicates().tolist()
 
 output = []
 for i in range(len(address)):
